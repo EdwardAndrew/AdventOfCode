@@ -64,7 +64,7 @@ const partTwo = () => {
             },
             'hcl': x => RegExp(/^#[a-f\d]{6}$/g).test(x),
             'ecl': x => ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'].includes(x),
-            'pid': x => { console.log(x); return RegExp(/^[\d]{9}$/g).test(x)},
+            'pid': x => RegExp(/^[\d]{9}$/g).test(x),
             'cid': () => true
         }
         return entries.every(e => rules[e[0]](e[1]));
