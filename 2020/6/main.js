@@ -11,7 +11,7 @@ const partOne = () => {
         const answers = new Set(g.join('').split(''));
         return acc += answers.size;
     }, 0)
-}
+};
 
 const partTwo = () => {
     const groups = getEntries();
@@ -27,7 +27,7 @@ const partTwo = () => {
             }, 0);
         return acc += val;
     }, 0);
-}
+};
 
-console.log(partOne())
-console.log(partTwo())
+console.log(partOne());
+console.log(partTwo());
