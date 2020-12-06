@@ -19,11 +19,8 @@ const partTwo = () => {
         const chars = g.join('').split('');
         const answers = [...new Set(chars)];
         const val = answers
-            .map(a => chars
-                .filter(x => x === a)
-                .length === g.length)
-            .reduce((acc, n) => {
-                return acc += n ? 1 : 0;
+            .reduce((acc, a) => {
+                return acc += 1 * chars.filter(x => x === a).length === g.length;
             }, 0);
         return acc += val;
     }, 0);
